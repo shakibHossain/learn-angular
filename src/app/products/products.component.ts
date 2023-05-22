@@ -11,7 +11,7 @@ export class ProductsComponent {
 
   allowNewProduct = false;
   productCreationStatus = 'No product was created';
-  productName = '';
+  productName = 'test';
 
   constructor() {
     setTimeout(() => {

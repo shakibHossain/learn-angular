@@ -1,6 +1,7 @@
 <label>Product Name</label>
 <br />
-<input type="text" (input)="onUpdateProductName($event)" />
+<!-- <input type="text" (input)="onUpdateProductName($event)" /> -->
+<input type="text" [(ngModel)]="productName" />
 <br />
 {{ productName }}
 <br />
