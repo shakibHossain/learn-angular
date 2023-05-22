@@ -6,7 +6,7 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
   styleUrls: ['./products.component.scss'],
 })
 export class ProductsComponent {
-  @ViewChild('myButton')
+  @ViewChild('addProductButton')
   myButton!: ElementRef;
 
   allowNewProduct = false;
@@ -21,7 +21,8 @@ export class ProductsComponent {
 
   onCreateProduct() {
     console.log('myButton', this.myButton.nativeElement);
-    this.productCreationStatus = 'Product was created';
+    this.productCreationStatus =
+      'Product was created. Name is ' + this.productName;
   }
 
   onUpdateProductName(event: any) {

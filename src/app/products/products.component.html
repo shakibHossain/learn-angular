@@ -1,14 +1,28 @@
 <label>Product Name</label>
 <br />
+<!-- One way data binding -->
 <!-- <input type="text" (input)="onUpdateProductName($event)" /> -->
+<!-- Two way data binding -->
 <input type="text" [(ngModel)]="productName" />
 <br />
 {{ productName }}
 <br />
-<button #myButton [disabled]="!allowNewProduct" (click)="onCreateProduct()">
+<button
+  #addProductButton
+  [disabled]="!allowNewProduct"
+  (click)="onCreateProduct()"
+>
   Add product
 </button>
+<button
+  #resetProductButton
+  [disabled]="productName === ''"
+  (click)="productName = ''"
+>
+  Reset
+</button>
 <br />
+<!-- String interpolation -->
 <p>{{ productCreationStatus }}</p>
 <p [innerHTML]="allowNewProduct"></p>
 <app-product></app-product>
