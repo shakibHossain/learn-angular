@@ -23,7 +23,10 @@
 </button>
 <br />
 <!-- String interpolation -->
-<p>{{ productCreationStatus }}</p>
+<p *ngIf="productCreated; else noProduct">{{ productCreationStatus }}</p>
+<ng-template #noProduct>
+  <p>No product was created!</p>
+</ng-template>
 <p [innerHTML]="allowNewProduct"></p>
 <app-product></app-product>
 <app-product></app-product>

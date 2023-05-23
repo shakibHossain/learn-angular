@@ -11,6 +11,7 @@ export class ProductsComponent {
 
   allowNewProduct = false;
   productCreationStatus = 'No product was created';
+  productCreated = false;
   productName = 'test';
 
   constructor() {
@@ -20,7 +21,8 @@ export class ProductsComponent {
   }
 
   onCreateProduct() {
-    console.log('myButton', this.myButton.nativeElement);
+    // console.log('myButton', this.myButton.nativeElement);
+    this.productCreated = true;
     this.productCreationStatus =
       'Product was created. Name is ' + this.productName;
   }
