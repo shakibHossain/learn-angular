@@ -13,6 +13,7 @@ export class ProductsComponent {
   productCreationStatus = 'No product was created';
   productCreated = false;
   productName = 'test';
+  products = ['Product 1', 'Product 2'];
 
   constructor() {
     setTimeout(() => {
@@ -22,6 +23,7 @@ export class ProductsComponent {
 
   onCreateProduct() {
     // console.log('myButton', this.myButton.nativeElement);
+    this.products.push('Product ' + Math.random);
     this.productCreated = true;
     this.productCreationStatus =
       'Product was created. Name is ' + this.productName;
